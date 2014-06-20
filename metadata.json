@@ -99,9 +99,9 @@
             "font-size": "15px",
             "font-weight": "600",
             "line-height": "25px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch6",
             "letter-spacing": "inherit",
-            "color-hover": "@color-swatch1",
+            "color-hover": "lighten(@color-swatch6, 40%)",
             "background-color": "@color-swatch2",
             "background-color-hover": "@color-swatch2"
          },
