@@ -2,6 +2,10 @@
 	"name":"Sarasota",
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
+	"pageTypes": [
+		"home",
+		"default"
+	],
 	"tags": {
 		"en": ["minimal", "clean", "photography", "modern", "website", "creative", "unique", "media", "sans-serif"]
 	},
@@ -110,11 +114,11 @@
             "font-size": "15px",
             "font-weight": "400",
             "line-height": "25px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch6",
             "letter-spacing": "inherit",
-            "color-hover": "@color-swatch1",
+            "color-hover": "@color-swatch6",
             "background-color": "@color-swatch3",
-            "background-color-hover": "darken(@color-swatch3, 10%)"
+            "background-color-hover": "@color-swatch3"
         },
         "font8": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",

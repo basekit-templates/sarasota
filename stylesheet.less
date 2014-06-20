@@ -220,12 +220,11 @@ blockquote {
 	font-style: italic;
 	font-size: bkscale(@font-swatch5-font-size, 1.2);
 	line-height: bkscale(@font-swatch5-line-height, 1.2);
-	background-color: @color-swatch3;
-	color: @color-swatch1;
-	border-radius: 2px;
+	border: 1px solid @borders-blocks;
+	color: @color-swatch5;
 	&:before {
 		left: 8px;
-		color: @color-swatch1;
+		color: @color-swatch5;
 	}
 }
 
@@ -265,9 +264,9 @@ button.btn,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
 .widget.ecomcheckout .checkout-order-button {
-	border: 0;
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
+	border: 1px solid darken(@font-swatch7-background-color, 20%);
 	-webkit-appearance: none;
 	font-family:@font-swatch7-font-family;
 	font-weight: @font-swatch7-font-weight;
@@ -281,9 +280,9 @@ button.btn,
 	-moz-transition: .2s;
 	-ms-transition: .2s;
 	transition: .2s;
-	border-radius: 2px;
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
+		border: 1px solid darken(@font-swatch7-background-color, 40%);
 	}
 }
 
@@ -347,7 +346,6 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
-	border-radius: 2px;
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 		background-color: @color-swatch1;
@@ -370,7 +368,7 @@ input[type=email],
 input[type=text],
 input[type=search],
 .signupform fieldset input {
-	height: 39px;
+	height: 41px;
 	vertical-align: middle;
 }
 
@@ -395,7 +393,6 @@ textarea {
 select {
 	cursor: pointer;
 	-webkit-appearance: none;
-	-webkit-border-radius: 0;
 	position: relative;
 	background-image: image('/images/arrow-down.png');
 	background-repeat: no-repeat;
@@ -404,7 +401,7 @@ select {
 	background-position-y: 53%;
 	margin-bottom: 12px;
 	padding-right: 33px;
-	border-radius: 2px;
+	border-radius: 0;
 }
 
 .svg {
@@ -839,6 +836,21 @@ input[type="search"]::-webkit-search-decoration {
 	background-image: image('/images/basket.svg');
 }
 
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
+	background-image: image('/images/basket.png');
+	background-size: 100% auto;
+	height: 15px;
+	width: 19px;
+	margin: 0 14px 0 0;
+	top: 3px;
+}
+.svg {
+	.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
+		background-image: image('/images/basket.svg');
+	}
+}
+
+
 .widget.ecombasket {
 	display: inline-block;
 	clear: both;
@@ -996,6 +1008,89 @@ input[type="search"]::-webkit-search-decoration {
 .svg .ctc-wrap a {
 	background-image: image('/images/icon-phone.svg');
 }
+
+/* SVG Icons */
+.svg .widget.socialicons span.bk-socialicons-twitter a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+	background-image: image('/images/social/socialicons-twitter.svg');
+}
+
+.svg .widget.socialicons span.bk-socialicons-linkedin a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+	background-image: image('/images/social/socialicons-linkedin.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-facebook a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+	background-image: image('/images/social/socialicons-facebook.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-rss a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+	background-image: image('/images/social/socialicons-rss.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-googleplus a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+	background-image: image('/images/social/socialicons-googleplus.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-youtube a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+	background-image: image('/images/social/socialicons-youtube.svg')
+}
+
+.svg .widget.paypalbuynow .widget.button.paypal {
+	background-image: image('/images/social/socialicons-paypal.svg')
+}
+.svg .widget.tweet a {
+	background-image: image('/images/social/socialicons-twitter.svg')
+}
+.svg .widget.dropbox button {
+	background-image: image('/images/social/socialicons-dropbox.svg')
+}
+	
+/* PNG Icons */
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+	background-image: image('/images/social/socialicons-twitter.png');
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+	background-image: image('/images/social/socialicons-linkedin.png')
+}
+
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+	background-image: image('/images/social/socialicons-facebook.png')
+}
+
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+	background-image: image('/images/social/socialicons-rss.png')
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+	background-image: image('/images/social/socialicons-googleplus.png')
+}
+
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+	background-image: image('/images/social/socialicons-youtube.png')
+}
+
+.widget.paypalbuynow .widget.button.paypal {
+	background-image: image('/images/social/socialicons-paypal.png')
+}
+.widget.tweet a {
+	background-image: image('/images/social/socialicons-twitter.png')
+}
+.widget.dropbox button {
+	background-image: image('/images/social/socialicons-dropbox.png')
+}
+
 
 @media (max-width: 960px) {
 	.page-wrap, .template-header, .template-footer {
