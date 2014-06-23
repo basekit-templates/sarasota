@@ -6,6 +6,10 @@
 		"home",
 		"default"
 	],
+	"images":[
+        "images/image-1.jpg",
+        "images/image-2.jpg"
+    ],
 	"tags": {
 		"en": ["minimal", "clean", "photography", "modern", "website", "creative", "unique", "media", "sans-serif"]
 	},
