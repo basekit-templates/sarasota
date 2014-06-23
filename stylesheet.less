@@ -65,7 +65,7 @@
 @borders-blocks: darken(@color-swatch1, 10%);
 @borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
 @borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
-@background-blocks: lighten(@color-swatch2, 70%);
+@background-blocks: lighten(@color-swatch2, 75%);
 @text-links-hover: darken(@color-swatch6, 20%);
 
 // 1. Globals
@@ -263,7 +263,8 @@ button.btn,
 .blog-search-form button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
-.widget.ecomcheckout .checkout-order-button {
+.widget.ecomcheckout .checkout-order-button,
+.widget.ecombasket .ecombasket-pull {
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
 	border: 1px solid darken(@font-swatch7-background-color, 20%);
@@ -425,6 +426,11 @@ input[type="search"]::-webkit-search-decoration {
 	padding-left: 40px;
 	padding-right: 16px;
 	display: inline-block;
+	margin: 0;
+}
+
+.widget.tweet {
+	padding: 0;
 }
 
 // Header
@@ -520,6 +526,7 @@ input[type="search"]::-webkit-search-decoration {
 		top: 54px;
 		left: 0;
 		background-color: @color-swatch7;
+		border: 1px solid @borders-blocks;
 		li {
 			padding: 8px 20px;
 		}
@@ -573,10 +580,22 @@ input[type="search"]::-webkit-search-decoration {
 	color: @color-swatch1;
 }
 
+#tophomecontent {
+	padding: 60px 15% 40px;
+}
+
+#tophomeimage {
+	padding: 0 0 40px 0;
+}
+
 // Page
 .widget.feature .feature-bgimg .content,
 .widget.feature .feature-bgimg {
 	height: 450px;
+}
+
+.main .widget {
+	margin-bottom: 15px;
 }
 
 // Slideshow
@@ -607,12 +626,18 @@ input[type="search"]::-webkit-search-decoration {
 		border-right-color: @color-swatch2;
 		left: 6px;
 	}
+	.btn-prev {
+		left: -4px;
+	}
+	.btn-next {
+		right: -4px;
+	}
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev,
 .widget.responsiveslideshow .slideshow-widget .btn-next,
 .widget.responsiveslideshow .slideshow-widget .btn-play {
-	background-color: fadeout(@color-swatch1, 30%);
+	background-color: transparent;
 	border-radius: 100%;
 }
 
@@ -633,8 +658,9 @@ input[type="search"]::-webkit-search-decoration {
 		}
 	}
 	.content-wrapper {
-		background: fadeout(@color-swatch1, 25%);
 		text-shadow: none;
+		padding-left: 16px;
+		padding-bottom: 28px;
 		.title {
 			font-weight: @font-swatch3-font-weight;
 			&:after {
@@ -642,11 +668,11 @@ input[type="search"]::-webkit-search-decoration {
 			}
 		}
 		.title, .description {
-			color: @color-swatch5;
+			color: @color-swatch1;
+			display: inline;
 		}
 		.title {
 			padding-right: 0;
-			padding-left: 6px;
 		}
 		.description {
 			padding-left: 0;
@@ -708,6 +734,16 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.slideshow-image-list:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	border: 20px solid transparent;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 1px 1px fadeout(@color-swatch1, 75%);
+}
+
 // Menu
 .menu .menu-item-image-wrap,
 .blog-post-feature-image-wrap {
@@ -734,10 +770,8 @@ input[type="search"]::-webkit-search-decoration {
 .menu .menu-section-item-dietary-props .dietary-icon,
 .menu .menu-info .dietary-icon,
 .dietary-icon {
-	border: 1px solid darken(@background-blocks, 10%);
+	border-bottom: 1px solid darken(@background-blocks, 10%);
 	margin-right: 7px;
-	padding: 0 4px;
-	border-radius: 2px;
 }
 
 .menu-item h3 {
@@ -829,6 +863,8 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.ecombasket .ecombasket-pull p:before {
 	background-image: image('/images/basket.png');
+	background-size: 22px;
+	background-position: 1px 8px;
 	height: 35px;
 	width: 32px;
 	top: 6px;
@@ -840,13 +876,20 @@ input[type="search"]::-webkit-search-decoration {
 	background-image: image('/images/basket.svg');
 }
 
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text {
+	position: relative;
+	padding-left: 30px;
+}
+
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
+	position: absolute;
 	background-image: image('/images/basket.png');
 	background-size: 100% auto;
-	height: 15px;
+	height: 21px;
 	width: 19px;
 	margin: 0 14px 0 0;
-	top: 3px;
+	top: -1px;
+	left: -1px;
 }
 .svg {
 	.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
@@ -884,7 +927,7 @@ input[type="search"]::-webkit-search-decoration {
 	z-index: 1;
 	position: absolute;
 	top: 100%;
-	left: -1px;
+	left: 0;
 	background: white;
 	padding: 10px;
 	border: 1px solid @borders-blocks;
@@ -1196,6 +1239,14 @@ input[type="search"]::-webkit-search-decoration {
 	.productlist-display-form {
 		select, label {
 			width: 100%;
+		}
+	}
+	.widget.clicktocall a {
+		border: 1px solid darken(@font-swatch7-background-color, 20%);
+		padding: 6px 14px 8px 40px;
+		&:hover {
+			border: 1px solid darken(@font-swatch7-background-color, 40%);
+			padding: 6px 14px 8px 40px;
 		}
 	}
 }
