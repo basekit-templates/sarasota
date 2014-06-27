@@ -268,7 +268,6 @@ button.btn,
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
 	border: 1px solid darken(@font-swatch7-background-color, 20%);
-	-webkit-appearance: none;
 	font-family:@font-swatch7-font-family;
 	font-weight: @font-swatch7-font-weight;
 	-webkit-font-smoothing: antialiased;
@@ -281,6 +280,7 @@ button.btn,
 	-moz-transition: .2s;
 	-ms-transition: .2s;
 	transition: .2s;
+	-webkit-appearance: none;
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		border: 1px solid darken(@font-swatch7-background-color, 40%);
@@ -351,6 +351,7 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
+	-webkit-appearance: none;
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 		background-color: @color-swatch1;
