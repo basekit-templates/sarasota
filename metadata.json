@@ -2,6 +2,10 @@
 	"name":"Sarasota",
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
+	"pageTypes":[
+		"default",
+		"home"
+	],
 	"images":[
         "images/image-1.jpg",
         "images/image-2.jpg"
