@@ -62,7 +62,7 @@
 	=============================== */
 
 // Mixins
-@borders-blocks: darken(@color-swatch1, 10%);
+@borders-blocks: darken(@color-swatch1, 25%);
 @borders-buttons: lighten(desaturate(@color-swatch2, 40%), 40%);
 @borders-buttons-hover: lighten(desaturate(@color-swatch2, 40%), 30%);
 @background-blocks: lighten(@color-swatch2, 75%);
@@ -833,6 +833,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.ecomproductslist {
 	margin-left: 0;
+	float: left;
 }
 
 .widget.ecomproductslist .ecom-productslist-image-wrap,
@@ -906,6 +907,15 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added .text,
+.svg .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added .text {
+	color: @color-swatch1;
+	&:before {
+		background-image: none;
+		top: -2px;
+	}
+}
+
 
 .widget.ecombasket {
 	display: inline-block;
@@ -966,7 +976,7 @@ input[type="search"]::-webkit-search-decoration {
 	overflow: hidden;
 	position: relative;
 }
-.ecom-productlist-info {
+.ecom-productlist-info, .ecom-featuredproducts-info {
 	min-height: 120px;
 	padding-top: 20px;
 	h2 {
@@ -1009,6 +1019,15 @@ input[type="search"]::-webkit-search-decoration {
 .checkout-legal-links {
     list-style: none;
     padding: 20px 0;
+}
+
+.delivery {
+	padding-top: 20px;
+}
+
+.delivery-price,
+.checkout-total-amount {
+	color: darken(@color-swatch5, 30%);
 }
 
 // Content
