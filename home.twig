@@ -2,8 +2,6 @@
 {% block content %}
 
 <section class="section main home-page">
-
-	{{widget('content', 'tophomecontent', {content: '<h2 style="text-align:center">In eget mi facilisis venenatis nulla ut, volutpat eros. Sed iaculis suscipit consectetur. Nam ac nibh enim. Integer varius nisl ut semper</h2><br/><p style="text-align:center; font-size:42px; color:#3d3d3d;">&#8595;</p>', lines: 'all'})|raw}}
 	
 	{{widget('responsiveslideshow', 'homeslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': true, 'showBullets': false, 'allowPause': true, 'allowLoop': true, crop: true, 'images':[{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/image-1.jpg'), 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':asset('images/image-2.jpg'), 'title':'test title', 'description': 'test desc'}]})|raw}}
 

@@ -17,7 +17,7 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#363636",
-            "color3":"#ffffff",
+            "color3":"#4BA096",
             "color4":"#777777",
             "color5":"#a9a9a9",
             "color6":"#191919",
@@ -121,8 +121,8 @@
             "color": "@color-swatch6",
             "letter-spacing": "inherit",
             "color-hover": "@color-swatch6",
-            "background-color": "@color-swatch3",
-            "background-color-hover": "@color-swatch3"
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
         },
         "font8": {
             "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
