@@ -292,10 +292,7 @@ button.btn,
 .widget.profile .bk-profile-socialicons span a,
 .widget.socialicons span a {
 	padding: 0;
-	border: none;
-	&:hover {
-		border: none;
-	}
+	border: 1px solid darken(@font-swatch7-background-color, 20%);
 }
 
 button:disabled,
@@ -434,6 +431,10 @@ input[type="search"]::-webkit-search-decoration {
 .template-header {
 	background-color: @color-swatch7;
 	padding-top: 50px;
+	@media @mobile {
+	.template-header {
+		padding-top: 8px;
+	}
 }
 
 .header-main {
@@ -446,7 +447,7 @@ input[type="search"]::-webkit-search-decoration {
 .widget.logo {
 	float: left;
 	img {
-		margin-top: 3px;
+		margin-top: -8px;
 		margin-right: 11px;
 	}
 }
@@ -1040,7 +1041,7 @@ input[type="search"]::-webkit-search-decoration {
         font-size: @font-swatch5-font-size;
         font-weight: @font-swatch5-font-weight;
         line-height: @font-swatch5-line-height;
-        color: @color-swatch5;
+        color: darken(@color-swatch5, 30%);
         letter-spacing: @font-swatch5-letter-spacing;
     }
 }
