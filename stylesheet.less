@@ -451,52 +451,27 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Header
-
-header.bk-header {
-    padding: 20px 0;
-    background-color: @color-swatch7;
-    .wrapper {
-        min-height: 31px;
-    }
+.template-header {
+	background-color: @color-swatch7;
+	padding-top: 50px;
+	@media @mobile {
+		padding-top: 8px;
+	}
 }
 
-// Logo
-.widget {
-    &.logo {
-        display: inline-block;
-        .clearfix;
-        img {
-            display: block;
-            float: left;
-            margin-right: 6px;
-        }
-    }
+.header-main {
+	padding: 30px 0;
+	.companyname {
+		padding-top: 7px;
+	}
 }
-
-// Company Header
-.companyheader {
-    display: block;
-    float: left;
-    width: 30%;
-    @media @tablet {
-        width: 100%;
-    }
-}
-
-// Logo & Company Name
-.widget.logo, .widget.companyname {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.headerprofile {
-  background-color:@color-swatch1;
-}
-
-/* LOGO */
 
 .widget.logo {
-    margin-right: 10px;
+	float: left;
+	img {
+		margin-top: -8px;
+		margin-right: 11px;
+	}
 }
 
 .keyline {
