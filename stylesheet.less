@@ -262,7 +262,6 @@ button.btn,
 .template-footer .widget.profile .bk-profile-socialicons span a,
 .blog-search-form button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
-.widget.ecomcheckout table tr td .checkout-quantitybtn button,
 .widget.ecomcheckout .checkout-order-button,
 .widget.ecombasket .ecombasket-pull {
 	cursor: pointer;
@@ -286,6 +285,30 @@ button.btn,
 		background-color: @font-swatch7-background-color-hover;
 		box-shadow: 4px 4px lighten(@color-swatch3, 10%);
 	}
+}
+
+.basket-summary-quantitybtn button {
+	cursor: pointer;
+	background-color: @font-swatch7-background-color;
+	border: 1px solid darken(@font-swatch7-background-color, 20%);
+	font-family:@font-swatch7-font-family;
+	font-weight: @font-swatch7-font-weight;
+	-webkit-font-smoothing: antialiased;
+	color:@font-swatch7-color;
+	line-height:@font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	font-size: @font-swatch7-font-size;
+	padding: 2px 10px 2px;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	transition: .2s;
+	-webkit-appearance: none;
+	box-shadow: 3px 3px @color-swatch3;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+		box-shadow: 1px 1px lighten(@color-swatch3, 10%);
+}
 }
 
 .template-footer .widget.profile .bk-profile-socialicons span a,
@@ -428,27 +451,52 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 // Header
-.template-header {
-	background-color: @color-swatch7;
-	padding-top: 50px;
-	@media @mobile {
-		padding-top: 8px;
-	}
+
+header.bk-header {
+    padding: 20px 0;
+    background-color: @color-swatch7;
+    .wrapper {
+        min-height: 31px;
+    }
 }
 
-.header-main {
-	padding: 30px 0;
-	.companyname {
-		padding-top: 7px;
-	}
+// Logo
+.widget {
+    &.logo {
+        display: inline-block;
+        .clearfix;
+        img {
+            display: block;
+            float: left;
+            margin-right: 6px;
+        }
+    }
 }
+
+// Company Header
+.companyheader {
+    display: block;
+    float: left;
+    width: 30%;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+// Logo & Company Name
+.widget.logo, .widget.companyname {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerprofile {
+  background-color:@color-swatch1;
+}
+
+/* LOGO */
 
 .widget.logo {
-	float: left;
-	img {
-		margin-top: -8px;
-		margin-right: 11px;
-	}
+    margin-right: 10px;
 }
 
 .keyline {
@@ -1026,7 +1074,184 @@ input[type="search"]::-webkit-search-decoration {
 	color: darken(@color-swatch5, 30%);
 }
 
-
+.widget.ecombasketsummary {
+	margin-bottom: 30px;
+	// Image Wrap
+	.image-wrap {
+		background-position: -1000%;
+		@media (max-width: 530px) {
+			max-width: 130px;
+			img {
+				max-width: 100%!important;
+			}
+		}
+		@media (max-width: 360px) { 
+			max-width: 100%;
+		}
+	}
+	// Product Name, Price, Quantity
+	.basket-summary-productname,
+	.basket-summary-pricepu,
+	.basket-summary-quantity,
+	.basket-summary-subtotal,
+	.basket-summary-amount {
+		font-family: @font-swatch4-font-family;
+		font-size: 18px;
+		font-weight: @font-swatch4-font-weight;
+		line-height: @font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
+		color: @font-swatch4-color;
+	}
+	// Product Name
+	.basket-summary-productname {
+		display: block;
+		line-height: 24px;
+		color: @color-swatch2;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	// Quantity
+	.basket-summary-quantity {
+		margin-top: 8px;
+		.basket-summary-quantity-text {
+			display: block;
+			font-size: 14px;
+			line-height: 20px;
+		}
+		.quantity-number {
+			background-color: darken(@color-swatch1,3%);
+			padding: 1px 10px;
+			font-size: 14px;
+		}
+		button {
+			width: 20px;
+			height: 20px;
+			border: 0;
+			background-color: lighten(@color-swatch5,15%);
+			font-size: 13px;
+			font-family: @font-swatch4-font-family;
+			color: @color-swatch1;
+			line-height: 17px;
+			&:hover {
+				background-color: @color-swatch2;
+				cursor: pointer;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}	
+	// Table
+	table {
+		margin: 20px 0 30px;
+		border-spacing: 0;
+		border: 1px solid darken(@color-swatch1,10%);
+		border-bottom: 0;
+		// Heading Row
+		tr:first-child {
+			outline: 1px solid darken(@color-swatch1,10%);
+	        background-color: lighten(@color-swatch3,50%);
+	        -webkit-border-top-left-radius: 4px;
+			-webkit-border-top-right-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+			-moz-border-radius-topright: 4px;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			font-family: @font-swatch4-font-family;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			color: @font-swatch4-color;
+			text-transform: uppercase;
+			@media @mobile {
+				font-size: 12px;
+			}
+			th {
+				position: relative;
+				left: 20px;
+				text-align: left;
+				&:last-child {
+					@media (max-width: 360px) {
+						display: none;
+					}
+				}
+			}
+		}
+		// Item Row
+		tr td {
+			border-bottom: 1px solid darken(@color-swatch1,10%);
+			@media (max-width: 360px) {
+				display: table;
+				width: 100%;
+				border-bottom: 0;
+			}
+			&:nth-child(1),
+			&:nth-child(2) {
+				padding: 20px;
+				vertical-align: top;
+			}
+			&:nth-child(2) {
+				@media (max-width: 530px) {
+					padding-left: 0;
+				}
+			}
+			&:nth-child(3) {
+				padding: 20px;
+				border-left: 1px solid darken(@color-swatch1,10%);
+			}
+			// Responsive
+			&:nth-child(1) {
+				@media (max-width: 360px) {
+					padding-bottom: 0;
+				}
+			}
+			&:nth-child(2),
+			&:nth-child(3) {
+				@media (max-width: 360px) {
+					padding: 0 20px 0;
+					border-left: 0;
+				}
+			}
+			&:last-child {
+				@media (max-width: 360px) {
+					padding: 6px 20px;
+					margin: 20px 0 0;
+					border-bottom: 1px solid darken(@color-swatch1,10%);
+					border-top: 1px solid darken(@color-swatch1,10%);
+				}
+			}
+		}
+		tr:last-child td:last-child {
+			@media (max-width: 360px) {
+				border-top: 0;
+				margin-top: 0;
+				padding-top: 0;
+			}
+		}
+	}
+	// Continue to Payment Button
+	.basket-summary-submit {
+		margin-bottom: 30px;
+		&:disabled {
+			opacity: 0.2;
+			&:hover {
+				background-color: @color-swatch1;
+			}
+		}
+	}
+	// 
+	.js-shipping-opts {
+		border-bottom: 1px solid darken(@color-swatch1,10%);
+		padding-bottom: 20px;
+		font-size: 14px;
+		line-height: 26px;
+		margin-bottom: 20px;
+		label {
+			margin-bottom: 10px;
+		}
+	}
+}
 
 
 // Gallery Widget
