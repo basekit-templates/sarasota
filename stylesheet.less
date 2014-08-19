@@ -240,6 +240,11 @@ a,
 	}
 }
 
+.twitter div.twitter-profile-pic a,
+div.twitter-profile-pic {
+  line-height: 0;
+}
+
 .twitter ul li {
 	span > a, time, .twitter-content > span {
 		opacity: 0.7;
@@ -253,7 +258,6 @@ button.btn,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
 .widget.dropbox button,
-.clicktocall a,
 .signupform fieldset button,
 .blog-search-form button,
 .widget.socialicons span a,
@@ -279,7 +283,6 @@ button.btn,
 	-moz-transition: .2s;
 	-ms-transition: .2s;
 	transition: .2s;
-	-webkit-appearance: none;
 	box-shadow: 5px 5px @color-swatch3;
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
@@ -289,6 +292,8 @@ button.btn,
 
 .basket-summary-quantitybtn button {
 	cursor: pointer;
+	height: 20px;
+	width: 20px;
 	background-color: @font-swatch7-background-color;
 	border: 1px solid darken(@font-swatch7-background-color, 20%);
 	font-family:@font-swatch7-font-family;
@@ -299,15 +304,16 @@ button.btn,
 	letter-spacing: @font-swatch7-letter-spacing;
 	font-size: @font-swatch7-font-size;
 	padding: 2px 10px 2px;
+	width: 26px;
+	height: 26px;
 	-webkit-transition: .2s;
 	-moz-transition: .2s;
 	-ms-transition: .2s;
 	transition: .2s;
-	-webkit-appearance: none;
-	box-shadow: 3px 3px @color-swatch3;
+	box-shadow: none;
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
-		box-shadow: 1px 1px lighten(@color-swatch3, 10%);
+		box-shadow: none;
 }
 }
 
@@ -372,7 +378,6 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
-	-webkit-appearance: none;
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 		background-color: @color-swatch1;
@@ -419,13 +424,7 @@ textarea {
 .widget.ecomcheckout .delivery select,
 select {
 	cursor: pointer;
-	-webkit-appearance: none;
 	position: relative;
-	background-image: image('/images/arrow-down.png');
-	background-repeat: no-repeat;
-	background-position: right 12px center;
-	background-position-x: 95%;
-	background-position-y: 53%;
 	margin-bottom: 12px;
 	padding-right: 33px;
 	border-radius: 0;
@@ -707,6 +706,7 @@ input[type="search"]::-webkit-search-decoration {
 		.title, .description {
 			color: @color-swatch1;
 			display: inline;
+			padding-right: 0;
 		}
 		.title {
 			padding-right: 0;
@@ -935,6 +935,7 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
+
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added .text,
 .svg .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added .text {
 	color: @color-swatch1;
@@ -942,6 +943,10 @@ input[type="search"]::-webkit-search-decoration {
 		background-image: none;
 		top: -2px;
 	}
+}
+
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added {
+	background-color: lighten(@color-swatch3,20%);
 }
 
 
@@ -1105,7 +1110,7 @@ input[type="search"]::-webkit-search-decoration {
 		}
 		.quantity-number {
 			background-color: darken(@color-swatch1,3%);
-			padding: 1px 10px;
+			padding: 1px 16px;
 			font-size: 14px;
 		}
 		button {
@@ -1624,6 +1629,12 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	.widget .extendednavigation a.pull {
 		right: 45%;
+	}
+	.widget.clicktocall a {
+		box-shadow: 5px 5px @color-swatch3;
+		&:hover {
+		box-shadow: 4px 4px lighten(@color-swatch3, 10%);
+		}
 	}
 	.productlist-display-form {
 		select, label {
