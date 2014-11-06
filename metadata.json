@@ -2,6 +2,7 @@
 	"name":"Sarasota",
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
+    "templateType":"standard",
 	"pageTypes":[
 		"default",
 		"home"
