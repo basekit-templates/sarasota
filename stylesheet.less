@@ -241,12 +241,29 @@ div.twitter-profile-pic {
 }
 
 
+
+
+// -----------------------------
+// Default Page
+// -----------------------------
+
+.default-page {
+	border-top: 1px solid darken(@color-swatch1, 7%);
+	padding: 30px 0 30px;
+}
+
+
+
+
 // -----------------------------
 // Header
 // -----------------------------
 
-.bk-header {
-	border-bottom: 1px solid @color-swatch1;
+.theme-header.flex-container {
+	line-height: 0;
+}
+
+.theme-header {
 	@media @tablet {
 		display: inline-block;
 		width: 100%;
@@ -254,9 +271,10 @@ div.twitter-profile-pic {
 }
 
 .brand {
-    margin-top: 10px;
-    margin-bottom: 10px;
-	.widget.logo, .widget.companyname {
+    padding-top: 20px;
+    padding-bottom: 20px;
+	.widget.logo,
+	.widget.companyname {
 		display: inline-block;
 		vertical-align: middle;
 	}
@@ -268,10 +286,11 @@ div.twitter-profile-pic {
 		display: table;
 		width: 100%;
 		text-align: center;
+		border-bottom: 1px solid darken(@color-swatch1, 7%);
 	}
 }
 
-// Flexbox solution for header on DESKTOP // 
+// Flexbox solution for header on DESKTOP //
 
 @media only screen and (min-width: 769px) {
 	.flex-container {
@@ -305,10 +324,6 @@ div.twitter-profile-pic {
 	    align-items: center;
 	    }
 
-    .flex-item {
-        min-width: 50%;
-    }
-
 	.flex-item:nth-child(1) {
 	    -webkit-box-ordinal-group: 1;
 	    -moz-box-ordinal-group: 1;
@@ -323,6 +338,7 @@ div.twitter-profile-pic {
 	    -webkit-align-self: auto;
 	    -ms-flex-item-align: auto;
 	    align-self: auto;
+	    min-width: 20%;
 	    }
 
 	.flex-item:nth-child(2) {
@@ -339,6 +355,7 @@ div.twitter-profile-pic {
 	    -webkit-align-self: auto;
 	    -ms-flex-item-align: auto;
 	    align-self: auto;
+	    min-width: 70%;
 	}
 }
 
@@ -364,16 +381,16 @@ div.twitter-profile-pic {
 		border-top-color: @font-swatch6-color-hover;
 	}
 	ul li:hover ul {
-		background-color: darken(@color-swatch2, 2%);
-		border: 1px solid @color-swatch1;
+		background-color: @color-swatch1;
+		border: 1px solid darken(@color-swatch1, 7%);
 	}
 	ul li ul li {
-		border-bottom: 1px solid @color-swatch1;
+		border-bottom: 1px solid darken(@color-swatch1, 7%);
 		.text {
 			padding: 9px 0;
 		}
 		&:hover {
-			background-color: darken(@color-swatch2, 3%)
+			background-color: darken(@color-swatch1, 2%)
 		}
 	}
 }
@@ -390,7 +407,7 @@ div.twitter-profile-pic {
     }
 }
 
-// Styles for Tablet & Mobile // 
+// Styles for Tablet & Mobile //
 
 @media @tablet {
 	.widget.extendednavigation {
@@ -417,16 +434,18 @@ div.twitter-profile-pic {
 	}
 }
 
-// Styles for TABLET ONLY // 
+// Styles for TABLET ONLY //
 
 @media only screen and (max-width : 768px) and (min-width : 480px) {
 	.widget.extendednavigation {
+		margin-bottom: 0;
 		ul li {
 			border-bottom: none;
-			border-top: 1px solid @color-swatch1;
+			border-top: 1px solid darken(@color-swatch1, 7%);
 		}
 		ul {
-			margin-top: -1px;
+			margin-top: 0;
+			padding-top: 0;
 		}
 		ul li ul li {
 			border-bottom: none;
@@ -438,34 +457,37 @@ div.twitter-profile-pic {
 			padding: 0 20px;
 		}
 		a.pull {
-			top: -35px;
+			top: -73px;
 		}
 	}
 }
 
-// Styles for MOBILE ONLY // 
+// Styles for MOBILE ONLY //
 
 @media @mobile {
 	.widget.extendednavigation {
 		width: 100%;
 		float: left;
 		min-height: 45px;
-		margin-top: 25px;
+		margin-top: 10px;
 		background-color: @color-swatch1;
+		ul {
+			padding-top: 55px;
+		}
 		ul li:hover ul {
-			background-color: darken(@color-swatch1, 5%);
+			background-color: darken(@color-swatch1, 2%);
 			li:hover {
-				background-color: darken(@color-swatch1, 5%);
+				background-color: darken(@color-swatch1, 3%);
 			}
             li:last-child {
-                border-bottom: 1px solid @color-swatch2;
+                border-bottom: 1px solid darken(@color-swatch1, 7%);
             }
 		}
 		ul li {
 			border-bottom: none;
-			border-top: 1px solid @color-swatch2;
+			border-top: 1px solid darken(@color-swatch1, 7%);
 			&:hover {
-				background-color: darken(@color-swatch1, 5%);
+				background-color: darken(@color-swatch1, 3%);
 			}
 			a {
 				padding: 9px 20px;
@@ -509,18 +531,6 @@ div.twitter-profile-pic {
 				box-shadow: 0 6px 0 @color-swatch4, 0 12px 0 @color-swatch4;
 			}
 		}
-	}
-	/* Selected state */
-	.extendednavigation ul li.folder.selected ul li .text {
-	    background-color: darken(@color-swatch1, 5%);
-	    color: darken(@color-swatch4, 10%);
-	}
-
-	.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
-	    a, .text {
-	        background-color: darken(@color-swatch1, 5%);
-	        color: darken(@color-swatch4, 10%);
-	    }
 	}
 }
 
@@ -827,7 +837,6 @@ input[type="search"]::-webkit-search-decoration {
 
 // Home
 .section.main {
-	padding: 30px 0 30px;
 	h3 {
 		border-bottom: none;
 	}
