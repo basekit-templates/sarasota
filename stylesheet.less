@@ -647,9 +647,6 @@ textarea,
 	-ms-transition: border .2s;
 	transition: border .2s;
 	background-color: @color-swatch1;
-
-	// Fix for iOS devices
-    -webkit-border-radius: 0;
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
 		background-color: @color-swatch1;
@@ -687,6 +684,9 @@ input[type=search],
 	input[type=email],
 	input[type=search] {
 		margin-right: 5px;
+
+		// Fix for iOS devices
+    	-webkit-border-radius: 0;
 	}
 }
 
