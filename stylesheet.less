@@ -930,49 +930,6 @@ input[type="search"]::-webkit-search-decoration {
 	}
 }
 
-.widget.responsiveslideshow:hover span.btn-play,
-.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause {
-	&:before, &:after {
-		width: 8px;
-		height: 26px;
-		background: @color-swatch2;
-		border: 0;
-		top: 27px;
-		left: 28px;
-	}
-	&:after {
-		left: 42px;
-	}
-}
-
-.widget.responsiveslideshow .slideshow-widget .btn-play {
-	text-indent: -99999px;
-	width: 80px;
-	height: 80px;
-	top: 50%;
-	left: 50%;
-	margin-left: -40px;
-	margin-top: -40px;
-	&:before, &:after {
-		content: "";
-		display: block;
-		position: absolute;
-		width: 0;
-		height: 0;
-		border: 20px solid transparent;
-		border-left-color: @color-swatch2;
-		left: 32px;
-		top: 31%;
-		border-top-width: 15px;
-		border-bottom-width: 15px;
-	}
-	&:hover {
-		&:before, &:after {
-			top: 31%;
-		}
-	}
-}
-
 .slideshow-image-list:after {
 	position: absolute;
 	content: "";
