@@ -4,7 +4,6 @@
 	"screenshot":"thumbnail.png",
     "templateType":"standard",
 	"pageTypes":[
-		"default",
 		"home"
 	],
 	"images":[
