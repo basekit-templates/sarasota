@@ -199,6 +199,10 @@ h6 {
 		letter-spacing: @font-swatch10-letter-spacing;
 		font-size: @font-swatch10-font-size;
 		color:@font-swatch10-color;
+
+		@media @tablet {
+			word-wrap: break-word;
+		}
 	}
 }
 
@@ -277,13 +281,17 @@ div.twitter-profile-pic {
 	.widget.companyname {
 		display: inline-block;
 		vertical-align: middle;
+
+		@media @tablet {
+			display: block;
+		}
 	}
 	.logo img {
 		padding-top: 7px;
 		margin-right: 5px;
 	}
 	@media @tablet {
-		display: table;
+		display: block;
 		width: 100%;
 		text-align: center;
 		border-bottom: 1px solid darken(@color-swatch1, 7%);
