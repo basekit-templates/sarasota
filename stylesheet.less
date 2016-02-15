@@ -1272,6 +1272,9 @@ input[type="search"]::-webkit-search-decoration {
 		@media (max-width: 360px) {
 			max-width: 100%;
 		}
+		img {
+			max-width: 100%!important;
+		}
 	}
 	// Product Name, Price, Quantity
 	.basket-summary-productname,
@@ -1332,6 +1335,7 @@ input[type="search"]::-webkit-search-decoration {
 		border-spacing: 0;
 		border: 1px solid darken(@color-swatch1,10%);
 		border-bottom: 0;
+		width: 100%;
 		// Heading Row
 		tr:first-child {
 			outline: 1px solid darken(@color-swatch1,10%);
@@ -1370,10 +1374,12 @@ input[type="search"]::-webkit-search-decoration {
 				width: 100%;
 				border-bottom: 0;
 			}
+			&:first-child {
+			    max-width: 100px;
+			}
 			&:nth-child(1),
 			&:nth-child(2) {
 				padding: 20px;
-				vertical-align: top;
 			}
 			&:nth-child(2) {
 				@media (max-width: 530px) {
