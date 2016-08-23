@@ -1,7 +1,7 @@
 {
 	"name":"Sarasota",
 	"thumbnail":"thumbnail.png",
-	"screenshot":"thumbnail.png",
+	"screenshot":"sarasota-screenshot.jpg",
     "templateType":"standard",
 	"pageTypes":[
 		"home"
