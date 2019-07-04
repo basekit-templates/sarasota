@@ -71,48 +71,27 @@
 // 	margin: 0 auto;
 }
 
-// .row {
-// 	margin-left: -@gutter;
-// 	clear: both;
-// 	zoom: 1;
-// 	&:after, &:before {
-// 		display: table;
-// 		line-height: 0;
-// 		content: "";
-// 		clear: both;
-// 	}
-// }
-
-// img { max-width: 100%; height: auto; }
-
-// *, *:before, *:after {
-// 	-webkit-box-sizing: border-box;
-// 	   -moz-box-sizing: border-box;
-// 			box-sizing: border-box;
-// }
+.row1 {
+	margin-left: -@gutter;
+	clear: both;
+	zoom: 1;
+	&:after, &:before {
+		display: table;
+		line-height: 0;
+		content: "";
+		clear: both;
+	}
+}
 
 
-// // IE & Browser Fixes
-// [class*="span-"], .container, .row { zoom: 1; }
+// Base grid mobile, eg the even more popular iPhone
+@media (max-width: 767px) {
+	[class*="span-"] {
+		margin-left: 0; width: 100%;
+		&[class*="shift-"] { margin-left: 0; }
+	}
 
-// img { width: auto~"\9"; }
-
-// *, *:before, *:after {
-// 	-webkit-box-sizing: border-box;
-// 	   -moz-box-sizing: border-box;
-// 			box-sizing: border-box;
-// }
-
-// /* @import "breakpoints.less"; // Breakpoints for varying browser sizes, comment this out when using a fluid grid */
-
-// // Base grid mobile, eg the even more popular iPhone
-// @media (max-width: 767px) {
-// 	[class*="span-"] {
-// 		margin-left: 0; width: 100%;
-// 		&[class*="shift-"] { margin-left: 0; }
-// 	}
-
-// 	.row { margin: 0 @gutter; }
-// 	.row .row { margin: 0; }
-// 	.container { width: 100%; }
-// }
+	.row1 { margin: 0 @gutter; }
+	.row1 .row1 { margin: 0; }
+	.container { width: 100%; }
+}
