@@ -1,6 +1,18 @@
 {% extends "layout.twig" %}
 {% block content %}
 
+<header class="container page-wrap  home-page">
+	<div class="theme-header flex-container">
+		<div class="brand flex-item">
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+			{{widget('companyname', 'companyname', {"business": "profile", "showTplWidget": "0"})|raw}}
+		</div>
+		<nav class="flex-item">
+			{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+		</nav>
+	</div>
+</header>
+
 <section class="section main home-page clearfix">
     
     <div class="container">
