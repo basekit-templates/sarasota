@@ -10,19 +10,31 @@
 // -----------------------------
 
 
+div.container.page-wrap {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.row.widget,
+.row.widget .row {
+    margin: 0;
+}    width: 98.63%;
+
+
 // Layout
 .empty-zone,
 #page-zones__main:empty,
-.container,
 #page-zones__main > .widget:not(.row),
+.widget.responsiveslideshow,
 .row:not(.widget):not(.row--width-no-padding) .row__container {
     margin-left: auto;
     margin-right: auto;
     max-width: 1170px;
-    width: 90%;
+    width: 98.63%;
     
     @media @tablet {
-        width: 98.63%;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -35,7 +47,7 @@
 // Move spacing to first widget in the main zone (not sections)
 .edit #page-zones__main-overlay + .widget:not(.row),
 #page-zones__main > .widget:not(.row):first-child {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 
