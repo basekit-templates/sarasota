@@ -1,0 +1,83 @@
+// ---------------------------
+// Migration Styles
+// ---------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+div.container.page-wrap {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.row.widget,
+.row.widget .row {
+    margin: 0;
+}    width: 98.63%;
+
+
+// Layout
+.empty-zone,
+#page-zones__main:empty,
+#page-zones__main > .widget:not(.row),
+.widget.responsiveslideshow,
+.row:not(.widget):not(.row--width-no-padding) .row__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    width: 98.63%;
+    
+    @media @tablet {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
+.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+    margin-top: 15px;
+}
+
+
+// Move spacing to last widget in the main zone (not sections)
+#page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: 30px;
+}
+
+
+// Add spacing to the top of a widget when it follows a section
+#page-zones__main > .row + .widget:not(.row) {
+    margin-top: 30px;
+}
+
+
+// Adds spacing to the section when a widget is before it
+#page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    &:not(last-child) {
+         margin-bottom: 0;
+    }
+}
+
+
+// Widget overrides
+.row.widget {
+    margin-bottom: 0;
+}
+
+
+}
